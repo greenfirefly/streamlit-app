@@ -37,10 +37,12 @@ with dataset:
     data_load_state.text('Loading data...done!')
 
     labels = 'failure', 'no failure'
+    pie_data = data['failure'].value_counts()
+    st.write(pie_data)
 
     fig, ax = plt.subplots(1,1)
     ax.set_title('Pie Chart')
-    ax.pie(data['failure'].value_counts(), labels=labels)
+    ax.pie(pie_data, labels=labels)
     st.pyplot(fig)
 
     
