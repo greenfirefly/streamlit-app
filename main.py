@@ -1,4 +1,3 @@
-
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -31,7 +30,7 @@ with dataset:
     st.header('Accessing our data set')
      
     data_load_state = st.text('Loading data...')
-    data = load_data('../data/special_purpose/ST4000DM000_processed_relevant.csv', nrows=100)
+    data = load_data('../data/ST4000DM000_failure.csv', nrows=100)
     
     st.subheader('Raw data')
     st.dataframe(data)
