@@ -36,7 +36,7 @@ with dataset:
     st.dataframe(data)
     data_load_state.text('Loading data...done!')
 
-    labels = 'not failure', 'failure'
+    labels = 'failure'
 
     fig, ax = plt.subplots(1,1)
     ax.set_title('Pie Chart')
