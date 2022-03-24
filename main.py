@@ -55,7 +55,7 @@ with features:
     ax.hist(data[st.session_state['type']], bins=20)
     st.pyplot(fig)
     
-    chart_data = pd.DataFrame(data[st.session_state['type']], data['countdown'])
+    chart_data = pd.DataFrame(data[st.session_state['type']], data['date'])
     st.line_chart(chart_data)
 
 
@@ -65,7 +65,7 @@ with details:
     st.write(test_data)
 
     fig, ax = plt.subplots()
-    ax.plot(test_data['countdown'], test_data['smart_5_raw'])
+    ax.plot(test_data['date'], test_data['smart_5_raw'])
     st.pyplot(fig)
     
 
