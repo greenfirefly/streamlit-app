@@ -30,7 +30,7 @@ with dataset:
     st.header('Accessing our data set')
      
     data_load_state = st.text('Loading data...')
-    data = load_data('../data/ST4000DM000_failure.csv', nrows=100)
+    data = load_data('https://raw.githubusercontent.com/greenfirefly/streamlit-app/main/data/ST4000DM000_failure.csv', nrows=100)
     
     st.subheader('Raw data')
     st.dataframe(data)
