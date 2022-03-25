@@ -74,20 +74,20 @@ with details:
 with model_training:
     st.header('Time to train')
 
-with data_predicting_container:
-    with data_predicting:
-        st.header('Wanna check it out?')
-        st.text('Try uploading your data and we predict you how long your hard drive will last')
+
+with data_predicting:
+    st.header('Wanna check it out?')
+    st.text('Try uploading your data and we predict you how long your hard drive will last')
 
 
-        uploaded_file = st.file_uploader("Choose a file")
-        
-        if uploaded_file is not None:
-            dataframe = pd.read_csv(uploaded_file)
-            st.write(dataframe.head(3))
-            st.balloons()
+    uploaded_file = st.file_uploader("Choose a file")
 
-        st.button('Predict')
+    if uploaded_file is not None:
+        dataframe = pd.read_csv(uploaded_file)
+        st.write(dataframe.head(3))
+        st.balloons()
+
+    st.button('Predict')
 
 
 st.sidebar.title('Fail or not to Fail!')
